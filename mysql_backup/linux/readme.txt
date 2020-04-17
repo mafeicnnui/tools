@@ -1,0 +1,2 @@
+1.linux上需要安装python3.6
+2.mydumper_backup.sh备份是基于mydumper的，需要编译安装mydumper
