@@ -14,13 +14,7 @@ settings={
                 "db":0,
                 "password":'WXwk2018'
      },
-     "db_dest":{
-                "host":"r-2ze9f53dad8419b4.redis.rds.aliyuncs.com",
-                "port":6379,
-                "db":6,
-                "password":'WXwk2018'
-     },
-     "key_match":"point:*,pointCms:*"
+     "key_match":"homePage:function:goods:218"
 }
 
 def get_config():
@@ -30,10 +24,6 @@ def get_config():
                                    password=settings['db_sour']['password'],
                                    db=settings['db_sour']['db'])
 
-    cfg['db_dest']   = redis.Redis(host=settings['db_dest']['host'],
-                                   port=settings['db_dest']['port'],
-                                   password=settings['db_dest']['password'],
-                                   db=settings['db_dest']['db'])
     cfg['key_match'] = settings['key_match']
     return cfg
 
@@ -55,10 +45,7 @@ def main():
 
     keys.sort()
     for key in keys:
-        d=cfg['db_sour'].dump(key)
-        print(key,d)
-        cfg['db_dest'].delete(key)
-        cfg['db_dest'].restore(key,0,d)
+        print(key,cfg['db_sour'].get(key).decode('UTF-8'))
 
 if __name__ == "__main__":
      main()
