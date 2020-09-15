@@ -1,0 +1,2362 @@
+# Time: 200723 11:18:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136766258
+# Query_time: 2.480759  Lock_time: 0.000123  Rows_sent: 41  Rows_examined: 1083854
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 11:18:07
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136767387
+# Query_time: 2.157895  Lock_time: 0.000121  Rows_sent: 41  Rows_examined: 1083883
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 11:21:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136770162
+# Query_time: 2.395913  Lock_time: 0.000121  Rows_sent: 41  Rows_examined: 1084122
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 11:21:06
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136771306
+# Query_time: 2.167025  Lock_time: 0.000107  Rows_sent: 41  Rows_examined: 1084135
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 11:24:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136774108
+# Query_time: 2.329127  Lock_time: 0.000122  Rows_sent: 41  Rows_examined: 1084394
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 11:24:07
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136775069
+# Query_time: 2.182539  Lock_time: 0.000111  Rows_sent: 41  Rows_examined: 1084427
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 11:27:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136777735
+# Query_time: 2.551326  Lock_time: 0.000121  Rows_sent: 41  Rows_examined: 1084662
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 11:27:07
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136778904
+# Query_time: 2.141310  Lock_time: 0.000117  Rows_sent: 41  Rows_examined: 1084692
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 11:30:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136781386
+# Query_time: 2.684121  Lock_time: 0.000139  Rows_sent: 41  Rows_examined: 1084934
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 11:30:07
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136783072
+# Query_time: 2.098495  Lock_time: 0.000113  Rows_sent: 41  Rows_examined: 1084951
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 11:33:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136786161
+# Query_time: 2.466718  Lock_time: 0.000143  Rows_sent: 41  Rows_examined: 1085204
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 11:33:06
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136787345
+# Query_time: 2.121154  Lock_time: 0.000114  Rows_sent: 41  Rows_examined: 1085218
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 11:36:05
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136790147
+# Query_time: 2.506935  Lock_time: 0.000113  Rows_sent: 41  Rows_examined: 1085472
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 11:36:07
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136791231
+# Query_time: 2.167890  Lock_time: 0.000122  Rows_sent: 41  Rows_examined: 1085504
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 11:39:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136794007
+# Query_time: 2.404212  Lock_time: 0.000120  Rows_sent: 41  Rows_examined: 1085744
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 11:39:06
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136795062
+# Query_time: 2.137390  Lock_time: 0.000143  Rows_sent: 41  Rows_examined: 1085771
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 11:42:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136797609
+# Query_time: 2.427930  Lock_time: 0.000103  Rows_sent: 41  Rows_examined: 1086012
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 11:42:06
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136798814
+# Query_time: 2.140866  Lock_time: 0.000110  Rows_sent: 41  Rows_examined: 1086027
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 11:45:05
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136801632
+# Query_time: 2.445181  Lock_time: 0.000146  Rows_sent: 41  Rows_examined: 1086284
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 11:45:07
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136802818
+# Query_time: 2.165070  Lock_time: 0.000150  Rows_sent: 41  Rows_examined: 1086307
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 11:48:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136806148
+# Query_time: 2.354028  Lock_time: 0.000121  Rows_sent: 41  Rows_examined: 1086554
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 11:48:07
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136807146
+# Query_time: 2.150366  Lock_time: 0.000129  Rows_sent: 41  Rows_examined: 1086585
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 11:51:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136809743
+# Query_time: 2.391935  Lock_time: 0.000137  Rows_sent: 41  Rows_examined: 1086822
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 11:51:06
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136810945
+# Query_time: 2.141862  Lock_time: 0.000122  Rows_sent: 41  Rows_examined: 1086836
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 11:54:05
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136813664
+# Query_time: 2.411507  Lock_time: 0.000123  Rows_sent: 41  Rows_examined: 1087094
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 11:54:07
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136814734
+# Query_time: 2.156403  Lock_time: 0.000116  Rows_sent: 41  Rows_examined: 1087120
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 11:57:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136817451
+# Query_time: 2.522096  Lock_time: 0.000125  Rows_sent: 41  Rows_examined: 1087362
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 11:57:07
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136818620
+# Query_time: 2.178698  Lock_time: 0.000155  Rows_sent: 41  Rows_examined: 1087391
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 12:00:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136820878
+# Query_time: 2.701191  Lock_time: 0.000152  Rows_sent: 41  Rows_examined: 1087634
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 12:00:07
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136822441
+# Query_time: 2.358267  Lock_time: 0.000120  Rows_sent: 41  Rows_examined: 1087647
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 12:03:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136826226
+# Query_time: 2.430731  Lock_time: 0.000121  Rows_sent: 41  Rows_examined: 1087904
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 12:03:06
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136827393
+# Query_time: 2.094424  Lock_time: 0.000112  Rows_sent: 41  Rows_examined: 1087926
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 12:06:05
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136830281
+# Query_time: 2.384690  Lock_time: 0.000128  Rows_sent: 41  Rows_examined: 1088172
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 12:06:07
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136831216
+# Query_time: 2.147004  Lock_time: 0.000135  Rows_sent: 41  Rows_examined: 1088204
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 12:09:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136833601
+# Query_time: 2.530147  Lock_time: 0.000187  Rows_sent: 41  Rows_examined: 1088444
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 12:09:07
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136834841
+# Query_time: 2.163860  Lock_time: 0.000150  Rows_sent: 41  Rows_examined: 1088465
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 12:12:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136837677
+# Query_time: 2.394893  Lock_time: 0.000120  Rows_sent: 41  Rows_examined: 1088712
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 12:12:06
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136838808
+# Query_time: 2.210477  Lock_time: 0.000122  Rows_sent: 41  Rows_examined: 1088729
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 12:15:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136841233
+# Query_time: 2.606208  Lock_time: 0.000120  Rows_sent: 41  Rows_examined: 1088984
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 12:15:06
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136842712
+# Query_time: 2.125447  Lock_time: 0.000132  Rows_sent: 41  Rows_examined: 1088997
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 12:18:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136845943
+# Query_time: 2.331745  Lock_time: 0.000138  Rows_sent: 41  Rows_examined: 1089254
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 12:18:07
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136846916
+# Query_time: 2.171330  Lock_time: 0.000126  Rows_sent: 41  Rows_examined: 1089278
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 12:21:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136849657
+# Query_time: 2.404118  Lock_time: 0.000132  Rows_sent: 41  Rows_examined: 1089522
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 12:21:06
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136850873
+# Query_time: 2.223330  Lock_time: 0.000122  Rows_sent: 41  Rows_examined: 1089534
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 12:24:05
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136853696
+# Query_time: 2.378196  Lock_time: 0.000133  Rows_sent: 41  Rows_examined: 1089794
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 12:24:07
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136854613
+# Query_time: 2.200031  Lock_time: 0.000116  Rows_sent: 41  Rows_examined: 1089825
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 12:27:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136857231
+# Query_time: 2.401370  Lock_time: 0.000112  Rows_sent: 41  Rows_examined: 1090062
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 12:27:06
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136858364
+# Query_time: 2.194174  Lock_time: 0.000118  Rows_sent: 41  Rows_examined: 1090081
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 12:30:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136860890
+# Query_time: 2.545154  Lock_time: 0.000129  Rows_sent: 41  Rows_examined: 1090334
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 12:30:06
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136862338
+# Query_time: 2.136240  Lock_time: 0.000114  Rows_sent: 41  Rows_examined: 1090346
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 12:33:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136865927
+# Query_time: 2.418408  Lock_time: 0.000164  Rows_sent: 41  Rows_examined: 1090604
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 12:33:07
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136866888
+# Query_time: 2.149446  Lock_time: 0.000120  Rows_sent: 41  Rows_examined: 1090633
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 12:36:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136869360
+# Query_time: 2.504608  Lock_time: 0.000136  Rows_sent: 41  Rows_examined: 1090872
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 12:36:06
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136870615
+# Query_time: 2.147600  Lock_time: 0.000125  Rows_sent: 41  Rows_examined: 1090892
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 12:39:05
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136873746
+# Query_time: 2.355939  Lock_time: 0.000141  Rows_sent: 41  Rows_examined: 1091144
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 12:39:07
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136874600
+# Query_time: 2.127470  Lock_time: 0.000127  Rows_sent: 41  Rows_examined: 1091177
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 12:42:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136877214
+# Query_time: 2.539197  Lock_time: 0.000118  Rows_sent: 41  Rows_examined: 1091412
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 12:42:07
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136878350
+# Query_time: 2.198392  Lock_time: 0.000145  Rows_sent: 41  Rows_examined: 1091439
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 12:45:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136880708
+# Query_time: 2.310899  Lock_time: 0.000133  Rows_sent: 41  Rows_examined: 1091684
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 12:45:06
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136882029
+# Query_time: 2.170304  Lock_time: 0.000116  Rows_sent: 41  Rows_examined: 1091699
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 12:48:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136885221
+# Query_time: 2.410891  Lock_time: 0.000159  Rows_sent: 41  Rows_examined: 1091954
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 12:48:06
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136886415
+# Query_time: 2.153545  Lock_time: 0.000111  Rows_sent: 41  Rows_examined: 1091964
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 12:51:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136889332
+# Query_time: 2.457926  Lock_time: 0.000127  Rows_sent: 41  Rows_examined: 1092222
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 12:51:07
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136890389
+# Query_time: 2.187337  Lock_time: 0.000116  Rows_sent: 41  Rows_examined: 1092251
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 12:54:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136892833
+# Query_time: 2.518980  Lock_time: 0.000141  Rows_sent: 41  Rows_examined: 1092494
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 12:54:06
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136894073
+# Query_time: 2.154959  Lock_time: 0.000122  Rows_sent: 41  Rows_examined: 1092510
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 12:57:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136896606
+# Query_time: 2.456225  Lock_time: 0.000134  Rows_sent: 41  Rows_examined: 1092762
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 12:57:06
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136897849
+# Query_time: 2.146107  Lock_time: 0.000117  Rows_sent: 41  Rows_examined: 1092775
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 13:00:05
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136900504
+# Query_time: 2.678551  Lock_time: 0.000140  Rows_sent: 41  Rows_examined: 1093034
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 13:00:07
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136902069
+# Query_time: 2.202858  Lock_time: 0.000116  Rows_sent: 41  Rows_examined: 1093065
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 13:03:05
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136905778
+# Query_time: 2.339175  Lock_time: 0.000167  Rows_sent: 41  Rows_examined: 1093304
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 13:03:07
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136906599
+# Query_time: 2.157488  Lock_time: 0.000169  Rows_sent: 41  Rows_examined: 1093337
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 13:03:20
+# User@Host: puppet[puppet] @ 10.2.39.18 []
+# Thread_id: 136907048
+# Query_time: 1.403139  Lock_time: 0.000000  Rows_sent: 0  Rows_examined: 0
+use puppet;
+COMMIT;
+# Time: 200723 13:03:20
+# User@Host: puppet[puppet] @ 10.2.39.18 []
+# Thread_id: 136907049
+# Query_time: 1.164969  Lock_time: 0.000000  Rows_sent: 0  Rows_examined: 0
+use puppet;
+COMMIT;
+# Time: 200723 13:03:20
+# User@Host: puppet[puppet] @ 10.2.39.18 []
+# Thread_id: 136907050
+# Query_time: 1.125762  Lock_time: 0.000000  Rows_sent: 0  Rows_examined: 0
+use puppet;
+COMMIT;
+# Time: 200723 13:06:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136909179
+# Query_time: 2.441564  Lock_time: 0.000115  Rows_sent: 41  Rows_examined: 1093572
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 13:06:07
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136910292
+# Query_time: 2.176441  Lock_time: 0.000110  Rows_sent: 41  Rows_examined: 1093592
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 13:09:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136912711
+# Query_time: 2.493699  Lock_time: 0.000116  Rows_sent: 41  Rows_examined: 1093844
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 13:09:06
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136913983
+# Query_time: 2.140190  Lock_time: 0.000127  Rows_sent: 41  Rows_examined: 1093855
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 13:12:05
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136916957
+# Query_time: 2.467153  Lock_time: 0.000174  Rows_sent: 41  Rows_examined: 1094112
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 13:12:07
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136918017
+# Query_time: 2.152547  Lock_time: 0.000112  Rows_sent: 41  Rows_examined: 1094138
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 13:15:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136920496
+# Query_time: 2.551452  Lock_time: 0.000119  Rows_sent: 41  Rows_examined: 1094384
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 13:15:07
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136921888
+# Query_time: 2.208528  Lock_time: 0.000113  Rows_sent: 41  Rows_examined: 1094401
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 13:15:10
+# User@Host: puppet[puppet] @ 10.2.39.18 []
+# Thread_id: 136922403
+# Query_time: 1.105404  Lock_time: 0.000060  Rows_sent: 0  Rows_examined: 0
+use puppet;
+insert into t_db_sync_tasks_log_detail(sync_tag,create_date,sync_table,sync_amount,duration) 
+              values('sync_mssql_mysql_park_213_proj','2020-07-23 13:15:09','dbo.park_specicarconfig','0','0');
+# Time: 200723 13:15:10
+# User@Host: puppet[puppet] @ 10.2.39.18 []
+# Thread_id: 136922404
+# Query_time: 1.102312  Lock_time: 0.000040  Rows_sent: 0  Rows_examined: 0
+use puppet;
+insert into t_db_sync_tasks_log_detail(sync_tag,create_date,sync_table,sync_amount,duration) 
+              values('sync_mssql_mysql_park_188_proj','2020-07-23 13:15:09','dbo.park_paychannel','67','0');
+# Time: 200723 13:15:10
+# User@Host: puppet[puppet] @ 10.2.39.18 []
+# Thread_id: 136922405
+# Query_time: 1.059021  Lock_time: 0.000053  Rows_sent: 0  Rows_examined: 0
+use puppet;
+insert into t_db_sync_tasks_log_detail(sync_tag,create_date,sync_table,sync_amount,duration) 
+              values('sync_mssql_mysql_park_207_proj','2020-07-23 13:15:09','dbo.park_paiddetails','1449','0');
+# Time: 200723 13:15:10
+# User@Host: puppet[puppet] @ 10.2.39.18 []
+# Thread_id: 136922406
+# Query_time: 1.047073  Lock_time: 0.000045  Rows_sent: 0  Rows_examined: 0
+use puppet;
+insert into t_db_sync_tasks_log_detail(sync_tag,create_date,sync_table,sync_amount,duration) 
+              values('sync_mssql_mysql_park_194_proj','2020-07-23 13:15:09','dbo.park_paylogext','0','0');
+# Time: 200723 13:15:10
+# User@Host: puppet[puppet] @ 10.2.39.18 []
+# Thread_id: 136922402
+# Query_time: 1.113898  Lock_time: 0.000000  Rows_sent: 0  Rows_examined: 0
+use puppet;
+COMMIT;
+# Time: 200723 13:18:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136924846
+# Query_time: 2.467583  Lock_time: 0.000117  Rows_sent: 41  Rows_examined: 1094654
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 13:18:06
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136926070
+# Query_time: 2.148363  Lock_time: 0.000125  Rows_sent: 41  Rows_examined: 1094670
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 13:21:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136929205
+# Query_time: 2.341650  Lock_time: 0.000126  Rows_sent: 41  Rows_examined: 1094922
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 13:21:07
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136930131
+# Query_time: 2.147206  Lock_time: 0.000118  Rows_sent: 41  Rows_examined: 1094954
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 13:24:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136932553
+# Query_time: 2.537524  Lock_time: 0.000140  Rows_sent: 41  Rows_examined: 1095194
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 13:24:07
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136933701
+# Query_time: 2.238038  Lock_time: 0.000112  Rows_sent: 41  Rows_examined: 1095212
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 13:27:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136936222
+# Query_time: 2.455934  Lock_time: 0.000119  Rows_sent: 41  Rows_examined: 1095462
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 13:27:06
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136937418
+# Query_time: 2.165222  Lock_time: 0.000107  Rows_sent: 41  Rows_examined: 1095473
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 13:30:05
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136940305
+# Query_time: 2.608566  Lock_time: 0.000111  Rows_sent: 41  Rows_examined: 1095734
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 13:30:07
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136941720
+# Query_time: 2.147047  Lock_time: 0.000119  Rows_sent: 41  Rows_examined: 1095762
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 13:33:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136945050
+# Query_time: 2.349945  Lock_time: 0.000105  Rows_sent: 41  Rows_examined: 1096004
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 13:33:07
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136946038
+# Query_time: 2.161835  Lock_time: 0.000128  Rows_sent: 41  Rows_examined: 1096031
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 13:33:34
+# User@Host: puppet[puppet] @ 10.2.39.18 []
+# Thread_id: 136946540
+# Query_time: 1.697564  Lock_time: 0.000239  Rows_sent: 57  Rows_examined: 1293427
+use puppet;
+SELECT b.server_desc,
+                    concat(b.server_ip,':',b.server_port) as server,
+                    concat(a.cpu_total_usage,'%') as cpu_total_usage,
+                    concat(a.mem_usage,'%')  as mem_usage,
+                    a.disk_usage,
+                    CONCAT(ROUND(a.disk_read/1000,1),'kb/s')  AS disk_read,
+                    CONCAT(ROUND(a.disk_write/1000,1),'kb/s') AS disk_write,
+                    CONCAT(ROUND(a.net_in/1000,1),'kb/s')     AS net_in,
+                    CONCAT(ROUND(a.net_out/1000,1),'kb/s')    AS net_out,
+                    DATE_FORMAT(a.create_date,'%Y-%m-%d %H:%i:%s')     AS cjrq,
+                    CASE WHEN TIMESTAMPDIFF(MINUTE, a.create_date, NOW())>10 THEN '0' ELSE '100' END  AS STATUS
+            FROM t_monitor_task_server_log a
+               LEFT JOIN t_server b ON a.server_id=b.id
+            WHERE (a.server_id,a.create_date) IN(
+            SELECT server_id,MAX(create_date) FROM `t_monitor_task_server_log` GROUP BY server_id )
+            -- ORDER BY STATUS,a.cpu_total_usage+0 DESC,a.mem_usage+0, b.server_desc
+            ORDER BY STATUS, b.server_desc;
+# Time: 200723 13:36:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136948506
+# Query_time: 2.474623  Lock_time: 0.000122  Rows_sent: 41  Rows_examined: 1096272
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 13:36:06
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136949765
+# Query_time: 2.168776  Lock_time: 0.000122  Rows_sent: 41  Rows_examined: 1096288
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 13:39:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136952879
+# Query_time: 2.324082  Lock_time: 0.000115  Rows_sent: 41  Rows_examined: 1096544
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 13:39:07
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136953794
+# Query_time: 2.115998  Lock_time: 0.000115  Rows_sent: 41  Rows_examined: 1096573
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 13:42:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136956412
+# Query_time: 2.450001  Lock_time: 0.000130  Rows_sent: 41  Rows_examined: 1096812
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 13:42:07
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136957615
+# Query_time: 2.233990  Lock_time: 0.000132  Rows_sent: 41  Rows_examined: 1096849
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 13:45:05
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136960195
+# Query_time: 2.551682  Lock_time: 0.000120  Rows_sent: 41  Rows_examined: 1097084
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 13:45:07
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136961451
+# Query_time: 2.137540  Lock_time: 0.000118  Rows_sent: 41  Rows_examined: 1097110
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 13:48:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136964656
+# Query_time: 2.372770  Lock_time: 0.000114  Rows_sent: 41  Rows_examined: 1097354
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 13:48:07
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136965698
+# Query_time: 2.164229  Lock_time: 0.000112  Rows_sent: 41  Rows_examined: 1097379
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 13:48:18
+# User@Host: puppet[puppet] @ 10.2.39.18 []
+# Thread_id: 136966176
+# Query_time: 1.888559  Lock_time: 0.000215  Rows_sent: 57  Rows_examined: 1295015
+use puppet;
+SELECT b.server_desc,
+                    concat(b.server_ip,':',b.server_port) as server,
+                    concat(a.cpu_total_usage,'%') as cpu_total_usage,
+                    concat(a.mem_usage,'%')  as mem_usage,
+                    a.disk_usage,
+                    CONCAT(ROUND(a.disk_read/1000,1),'kb/s')  AS disk_read,
+                    CONCAT(ROUND(a.disk_write/1000,1),'kb/s') AS disk_write,
+                    CONCAT(ROUND(a.net_in/1000,1),'kb/s')     AS net_in,
+                    CONCAT(ROUND(a.net_out/1000,1),'kb/s')    AS net_out,
+                    DATE_FORMAT(a.create_date,'%Y-%m-%d %H:%i:%s')     AS cjrq,
+                    CASE WHEN TIMESTAMPDIFF(MINUTE, a.create_date, NOW())>10 THEN '0' ELSE '100' END  AS STATUS
+            FROM t_monitor_task_server_log a
+               LEFT JOIN t_server b ON a.server_id=b.id
+            WHERE (a.server_id,a.create_date) IN(
+            SELECT server_id,MAX(create_date) FROM `t_monitor_task_server_log` GROUP BY server_id )
+            -- ORDER BY STATUS,a.cpu_total_usage+0 DESC,a.mem_usage+0, b.server_desc
+            ORDER BY STATUS, b.server_desc;
+# Time: 200723 13:51:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136968312
+# Query_time: 2.390120  Lock_time: 0.000171  Rows_sent: 41  Rows_examined: 1097622
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 13:51:06
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136969481
+# Query_time: 2.174880  Lock_time: 0.000109  Rows_sent: 41  Rows_examined: 1097633
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 13:54:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136972222
+# Query_time: 2.431160  Lock_time: 0.000164  Rows_sent: 41  Rows_examined: 1097894
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 13:54:07
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136973258
+# Query_time: 2.200458  Lock_time: 0.000211  Rows_sent: 41  Rows_examined: 1097914
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 13:57:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136975897
+# Query_time: 2.409956  Lock_time: 0.000115  Rows_sent: 41  Rows_examined: 1098162
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 13:57:06
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136977086
+# Query_time: 2.151074  Lock_time: 0.000154  Rows_sent: 41  Rows_examined: 1098181
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 14:00:05
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136979770
+# Query_time: 2.742908  Lock_time: 0.000122  Rows_sent: 41  Rows_examined: 1098434
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 14:00:07
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136981411
+# Query_time: 2.068390  Lock_time: 0.000118  Rows_sent: 41  Rows_examined: 1098465
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 14:03:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136985110
+# Query_time: 2.258165  Lock_time: 0.000108  Rows_sent: 41  Rows_examined: 1098704
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 14:03:07
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136985895
+# Query_time: 2.103880  Lock_time: 0.000118  Rows_sent: 41  Rows_examined: 1098733
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 14:04:36
+# User@Host: puppet[puppet] @ 10.2.39.18 []
+# Thread_id: 136987279
+# Query_time: 1.835105  Lock_time: 0.000247  Rows_sent: 57  Rows_examined: 1296713
+use puppet;
+SELECT b.server_desc,
+                    concat(b.server_ip,':',b.server_port) as server,
+                    concat(a.cpu_total_usage,'%') as cpu_total_usage,
+                    concat(a.mem_usage,'%')  as mem_usage,
+                    a.disk_usage,
+                    CONCAT(ROUND(a.disk_read/1000,1),'kb/s')  AS disk_read,
+                    CONCAT(ROUND(a.disk_write/1000,1),'kb/s') AS disk_write,
+                    CONCAT(ROUND(a.net_in/1000,1),'kb/s')     AS net_in,
+                    CONCAT(ROUND(a.net_out/1000,1),'kb/s')    AS net_out,
+                    DATE_FORMAT(a.create_date,'%Y-%m-%d %H:%i:%s')     AS cjrq,
+                    CASE WHEN TIMESTAMPDIFF(MINUTE, a.create_date, NOW())>10 THEN '0' ELSE '100' END  AS STATUS
+            FROM t_monitor_task_server_log a
+               LEFT JOIN t_server b ON a.server_id=b.id
+            WHERE (a.server_id,a.create_date) IN(
+            SELECT server_id,MAX(create_date) FROM `t_monitor_task_server_log` GROUP BY server_id )
+            -- ORDER BY STATUS,a.cpu_total_usage+0 DESC,a.mem_usage+0, b.server_desc
+            ORDER BY STATUS, b.server_desc;
+# Time: 200723 14:06:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136988404
+# Query_time: 2.420304  Lock_time: 0.000134  Rows_sent: 41  Rows_examined: 1098972
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 14:06:06
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136989556
+# Query_time: 2.131246  Lock_time: 0.000110  Rows_sent: 41  Rows_examined: 1098986
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 14:09:05
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136992359
+# Query_time: 2.407293  Lock_time: 0.000122  Rows_sent: 41  Rows_examined: 1099244
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 14:09:07
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136993338
+# Query_time: 2.202022  Lock_time: 0.000145  Rows_sent: 41  Rows_examined: 1099272
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 14:12:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136996238
+# Query_time: 2.383863  Lock_time: 0.000108  Rows_sent: 41  Rows_examined: 1099512
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 14:12:06
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136997251
+# Query_time: 2.144053  Lock_time: 0.000140  Rows_sent: 41  Rows_examined: 1099539
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 14:15:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 136999720
+# Query_time: 2.483342  Lock_time: 0.000149  Rows_sent: 41  Rows_examined: 1099784
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 14:15:06
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 137001052
+# Query_time: 2.215812  Lock_time: 0.000114  Rows_sent: 41  Rows_examined: 1099794
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 14:18:05
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 137004509
+# Query_time: 2.409190  Lock_time: 0.000113  Rows_sent: 41  Rows_examined: 1100054
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 14:18:07
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 137005458
+# Query_time: 2.218034  Lock_time: 0.000123  Rows_sent: 41  Rows_examined: 1100085
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 14:21:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 137008294
+# Query_time: 2.543548  Lock_time: 0.000150  Rows_sent: 41  Rows_examined: 1100322
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 14:21:07
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 137009416
+# Query_time: 2.289378  Lock_time: 0.000160  Rows_sent: 41  Rows_examined: 1100348
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 14:24:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 137011920
+# Query_time: 2.415917  Lock_time: 0.000101  Rows_sent: 41  Rows_examined: 1100594
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 14:24:07
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 137012958
+# Query_time: 2.231286  Lock_time: 0.000113  Rows_sent: 41  Rows_examined: 1100612
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 14:27:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 137015563
+# Query_time: 2.497962  Lock_time: 0.000130  Rows_sent: 41  Rows_examined: 1100862
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 14:27:07
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 137016827
+# Query_time: 2.231952  Lock_time: 0.000183  Rows_sent: 41  Rows_examined: 1100891
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 14:30:05
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 137019501
+# Query_time: 2.598228  Lock_time: 0.000139  Rows_sent: 41  Rows_examined: 1101134
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 14:30:07
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 137020985
+# Query_time: 2.405900  Lock_time: 0.000118  Rows_sent: 41  Rows_examined: 1101155
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 14:33:05
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 137024362
+# Query_time: 2.533590  Lock_time: 0.000127  Rows_sent: 41  Rows_examined: 1101404
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 14:33:07
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 137025355
+# Query_time: 2.231761  Lock_time: 0.000198  Rows_sent: 41  Rows_examined: 1101437
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 14:36:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 137027923
+# Query_time: 2.441505  Lock_time: 0.000133  Rows_sent: 41  Rows_examined: 1101672
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 14:36:07
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 137028962
+# Query_time: 2.113259  Lock_time: 0.000122  Rows_sent: 41  Rows_examined: 1101698
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 14:39:04
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 137031610
+# Query_time: 2.483942  Lock_time: 0.000119  Rows_sent: 41  Rows_examined: 1101944
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   cpu_total_usage   AS index_value,
+                   'cpu_total_usage' AS index_code,
+                   'cpu使用率'        AS index_name,
+                   a.create_date
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE  a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                       SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
+# Time: 200723 14:39:06
+# User@Host: sync[sync] @ 10.2.39.17 []
+# Thread_id: 137032843
+# Query_time: 2.150741  Lock_time: 0.000111  Rows_sent: 41  Rows_examined: 1101953
+use puppet;
+SELECT 
+                   a.server_id,
+                   a.create_date,
+                   mem_usage          AS index_value,
+                   'mem_usage'        AS index_code,
+                   '内存使用率'        AS index_name 
+                FROM t_monitor_task_server_log a ,t_server b
+                 WHERE a.server_id=b.id 
+                     AND b.server_ip NOT LIKE '10.2.39.%' 
+                     AND (a.server_id,a.create_date) IN( 
+                          SELECT a.server_id, MAX(a.create_date) FROM t_monitor_task_server_log a GROUP BY server_id);
