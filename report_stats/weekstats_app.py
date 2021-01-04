@@ -13,12 +13,17 @@ import traceback
 '''
   全局配置
 '''
+
+today=datetime.date.today().strftime("%Y-%m-%d")
+day7_ago=(datetime.date.today() + datetime.timedelta(days = -7)).strftime("%Y-%m-%d")
+print('统计日期范围 : {}~{}'.format(day7_ago,today))
+
 config = {
     'db_string': '10.2.39.17:23306:puppet:puppet:Puppet@123',
     'shape': 'line',
     'shape_disk_usage': 'bar',
-    'start_date': '2020-08-29',
-    'end_date': '2020-09-04',
+    'start_date': day7_ago,
+    'end_date': today,
     'cpu_title': 'cpu使用率[%]',
     'mem_title': '内存使用率[%]',
     'disk_usage_title': '磁盘使用率[%]',
@@ -107,7 +112,12 @@ tj_server =[
     {
         'server_id': 96,
         'db_id': '',
-    }
+    },
+    # 商管-资产租赁系统-应用1
+    {
+        'server_id': 113,
+        'db_id': '',
+    },
 ]
 
 '''

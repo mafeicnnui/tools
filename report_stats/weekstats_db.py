@@ -9,15 +9,21 @@ import datetime
 import pymysql
 import json
 import traceback
+
 '''
   全局配置
 '''
+
+today=datetime.date.today().strftime("%Y-%m-%d")
+day7_ago=(datetime.date.today() + datetime.timedelta(days = -7)).strftime("%Y-%m-%d")
+print('统计日期范围 : {}~{}'.format(day7_ago,today))
+
 config = {
    'db_string'        : '10.2.39.17:23306:puppet:puppet:Puppet@123',
    'shape'            : 'line',
    'shape_disk_usage' : 'bar',
-   'start_date'       : '2020-09-05',
-   'end_date'         : '2020-09-11',
+   'start_date'       :  day7_ago,
+   'end_date'         :  today,
    'cpu_title'        : 'cpu使用率[%]',
    'mem_title'        : '内存使用率[%]',
    'disk_usage_title' : '磁盘使用率[%]',
@@ -86,6 +92,16 @@ tj_server =[
      {
         'server_id': 92,
         'db_id': 142,
+     },
+     # 商管-资产租赁系统-mssql生产库
+     {
+        'server_id': 111,
+        'db_id': 149,
+     },
+     # 商管-资产租赁系统-mssql生产库-从库
+     {
+        'server_id': 112,
+        'db_id': '150',
      },
      # 商管-备份服务器
      {
@@ -302,6 +318,7 @@ html_templete='''
               var myChart = echarts.init($(p_id)[0]);
               var option  = p_option
               myChart.setOption(option);
+              console.log("picBase64Info_avg_img_0=",myChart.getDataURL())
           }
          
           $(document).ready(function() {
@@ -712,7 +729,6 @@ st_db_active_num = '''SELECT
                        GROUP BY DATE_FORMAT(create_date,'%Y-%m-%d %h:%i') 
                       order by 1'''
 
-
 st_db_qps_num = '''SELECT 
                         DATE_FORMAT(create_date,'%Y-%m-%d %h:%i') AS rq,
                         ROUND(AVG(db_qps),2) AS val
@@ -732,7 +748,6 @@ st_db_tps_num = '''SELECT
                          and  db_tps is not null and db_tps!='' 
                        GROUP BY DATE_FORMAT(create_date,'%Y-%m-%d %h:%i') 
                       order by 1'''
-
 
 st_db_bak_size = '''SELECT 
                         DATE_FORMAT(create_date,'%Y-%m-%d') AS rq,
@@ -1212,8 +1227,10 @@ def gen_html(cfg,html_templete):
         html_templete = html_templete.replace('$db_tps_option',    db_tps_option)
         html_templete = html_templete.replace('$db_bak_sz_option', db_bak_sz_option)
         html_templete = html_templete.replace('$db_bak_tm_option', db_bak_tm_option)
-        html_templete = html_templete.replace('$$DB_TITLE$$', '数据库地址:{}/{}'.
-                                              format(get_db_server(cfg)['ip'],get_db_server(cfg)['port']))
+        html_templete = html_templete.replace('$$DB_TITLE$$', '数据库地址:{}/{}/{}'.
+                                              format(get_db_server(cfg)['ip'],
+                                                     get_db_server(cfg)['port'],
+                                                     get_db_server(cfg).get('service')))
         html_templete = html_templete.replace('$$DB_TAB$$', '数据库运行情况')
         html_templete = html_templete.replace('$$DB_TABLE$$',
                            get_result_db(config,

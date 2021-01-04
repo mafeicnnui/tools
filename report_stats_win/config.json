@@ -1,0 +1,12 @@
+{
+    "db_string"       : "10.2.39.17:23306:puppet:puppet:Puppet@123",
+    "start_date"      : "2020-11-30",
+    "end_date"        : "2020-12-07",
+    "img_width"       : "1200px",
+    "img_height"      : "400px",
+    "tab_title_color" : "#D3D3D3",
+    "theme_type"      : "macarons",
+    "page_margin"     : 2,
+    "doc_img_size"    : 7,
+    "image_path"      : "images"
+}
