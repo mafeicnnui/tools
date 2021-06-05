@@ -1,0 +1,8 @@
+{
+    "db_ip"        : "rm-2zer0v9g25bgu4rx43o.mysql.rds.aliyuncs.com",
+    "db_port"      : "3306",
+    "db_user"      : "hopsononebi_2019",
+    "db_pass"      : "xMEAnLk8SOfa8bEwq2Xl6LpuI8QWXb0",
+    "db_service"   : "hopsonone_kpi",
+    "db_charset"   : "utf8"
+}
